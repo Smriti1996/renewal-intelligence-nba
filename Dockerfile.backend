@@ -1,0 +1,23 @@
+# Dockerfile.backend
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install curl for healthcheck (and clean up apt cache)
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python deps
+COPY requirements.txt ./requirements.txt
+COPY environment.yml ./environment.yml
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy project
+COPY src ./src
+COPY configs ./configs
+COPY data ./data
+
+ENV PYTHONUNBUFFERED=1
+
+CMD ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]

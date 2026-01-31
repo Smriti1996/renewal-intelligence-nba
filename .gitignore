@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Env
+.env
+.venv/
+.envrc
+
+# Conda
+*.yaml.lock
+
+# Data
+data/raw/*
+data/processed/*
+data/kg/*
+data/retrieval/*
+data/outputs/*
+!data/.gitkeep
+
+# Notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/

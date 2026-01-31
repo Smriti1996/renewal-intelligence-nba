@@ -1,0 +1,12 @@
+top_k_recos: 5
+
+max_candidates_per_segment: 20
+
+weights:
+  uplift_weight: 0.6
+  persona_affinity_weight: 0.3
+  recency_weight: 0.1
+
+cooldown_days:
+  default: 14
+  action: 30

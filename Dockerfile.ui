@@ -1,0 +1,28 @@
+# Dockerfile.ui
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt ./requirements.txt
+COPY environment.yml ./environment.yml
+
+# Install Python deps (Streamlit must be in requirements.txt)
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY src ./src
+COPY configs ./configs
+
+# Port for Streamlit
+EXPOSE 8501
+
+# Default backend URL; overridden in docker-compose
+ENV API_BASE_URL=http://localhost:8000
+
+CMD ["streamlit", "run", "src/ui/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]

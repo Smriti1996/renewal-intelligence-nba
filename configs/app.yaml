@@ -1,0 +1,15 @@
+app_name: "Renewal Intelligence NBA"
+version: "0.1.0"
+
+api:
+  host_env: "API_HOST"
+  port_env: "API_PORT"
+  debug_env: "API_DEBUG"
+
+paths:
+  data_root: "data"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  kg_dir: "data/kg"
+  retrieval_dir: "data/retrieval"
+  outputs_dir: "data/outputs"

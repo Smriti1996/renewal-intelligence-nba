@@ -1,0 +1,26 @@
+provider: "ollama"
+
+ollama:
+  base_url_env: "OLLAMA_BASE_URL"   # e.g. http://localhost:11434
+  model_env: "OLLAMA_MODEL"         # e.g. mistral, llama3, etc.
+  timeout_seconds: 60
+
+routing:
+  intents:
+    - "member_nba"        # “What is the next best action for this member?”
+    - "segment_analysis"  # “What works best for persona 3, first-year members?”
+    - "why_explanation"   # “Why is this category recommended?”
+    - "kg_explore"        # “How are personas and categories connected?”
+    - "general_help"      # generic / fallback help
+
+corpus:
+  # Minimum matched population required for a fact to enter the RAG corpus.
+  # Keep 0 for now so you don’t throw away synthetic rows.
+  min_support_for_corpus: 0
+
+embedding:
+  # Free, local embedding model used for retrieval (NBA fact corpus).
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  index_file: "faiss_index.bin"
+  meta_file: "metadata.parquet"
+  normalize: true

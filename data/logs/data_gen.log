@@ -1,0 +1,10 @@
+2026-01-24 16:22:28 | data_gen | INFO | Loaded config from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/configs/data_gen.yaml
+2026-01-24 16:22:28 | data_gen | INFO | Random seed set to 42
+2026-01-24 16:22:28 | data_gen | INFO | Next step: implement generate_members.py and generate_nba_uplift.py
+2026-01-24 17:48:21 | data_gen | INFO | Loaded config from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/configs/data_gen.yaml
+2026-01-24 17:48:21 | data_gen | INFO | Random seed set to 42
+2026-01-24 17:48:21 | data_gen | INFO | Generating members → /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/members.parquet
+2026-01-24 17:48:24 | data_gen | INFO | Members generated: 500000 rows
+2026-01-24 17:48:24 | data_gen | INFO | Generating NBA uplift summary → /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/nba_uplift_summary.parquet
+2026-01-24 17:48:24 | data_gen | INFO | NBA uplift rows: 26760
+2026-01-24 17:48:24 | data_gen | INFO | Data generation completed.

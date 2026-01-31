@@ -1,0 +1,9 @@
+2026-01-24 19:12:57 | kg | INFO | Loading NBA uplift summary from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/nba_uplift_summary.parquet
+2026-01-24 19:12:57 | kg | INFO | Building KG with min_uplift_for_edge=0.0000
+2026-01-24 19:12:57 | kg | INFO | Building KG nodes...
+2026-01-24 19:12:57 | kg | INFO | KG nodes: 1149
+2026-01-24 19:12:57 | kg | INFO | Building KG edges...
+2026-01-24 19:12:58 | kg | INFO | KG edges: 37910
+2026-01-24 19:12:58 | kg | INFO | Writing KG nodes to /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/kg/kg_nodes.csv
+2026-01-24 19:12:58 | kg | INFO | Writing KG edges to /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/kg/kg_edges.csv
+2026-01-24 19:12:58 | kg | INFO | KG build complete.

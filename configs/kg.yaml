@@ -1,0 +1,7 @@
+kg:
+  build_member_nodes: false      # keep off for now to avoid 500k nodes
+  min_uplift_for_edge: 0.0
+
+files:
+  nodes_csv: "data/kg/kg_nodes.csv"
+  edges_csv: "data/kg/kg_edges.csv"

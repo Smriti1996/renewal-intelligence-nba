@@ -1,0 +1,15 @@
+2026-01-24 22:15:41 | retrieval | INFO | Loading NBA uplift summary from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/nba_uplift_summary.parquet
+2026-01-24 22:15:41 | retrieval | INFO | Building NBA fact corpus...
+2026-01-24 22:15:42 | retrieval | INFO | Corpus size: 26760 docs
+2026-01-24 22:15:42 | retrieval | INFO | Building vector store with model 'sentence-transformers/all-MiniLM-L6-v2'
+2026-01-24 22:16:11 | retrieval | INFO | Retrieval index built and saved in data/retrieval
+2026-01-24 22:25:26 | retrieval | INFO | Loading NBA uplift summary from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/nba_uplift_summary.parquet
+2026-01-24 22:25:26 | retrieval | INFO | Building NBA fact corpus...
+2026-01-24 22:25:26 | retrieval | INFO | Corpus size: 26760 docs
+2026-01-24 22:25:27 | retrieval | INFO | Building vector store with model 'sentence-transformers/all-MiniLM-L6-v2'
+2026-01-24 22:25:53 | retrieval | INFO | Retrieval index built and saved in data/retrieval
+2026-01-24 22:53:28 | retrieval | INFO | Loading NBA uplift summary from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/nba_uplift_summary.parquet
+2026-01-24 22:53:28 | retrieval | INFO | Building NBA fact corpus...
+2026-01-24 22:53:28 | retrieval | INFO | Corpus size: 26760 docs
+2026-01-24 22:53:28 | retrieval | INFO | Building vector store with model 'sentence-transformers/all-MiniLM-L6-v2'
+2026-01-24 22:53:55 | retrieval | INFO | Retrieval index built and saved in data/retrieval

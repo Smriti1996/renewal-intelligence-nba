@@ -1,0 +1,43 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: renewal-backend
+    env_file: .env
+    environment:
+      - DATA_ROOT=/app/data
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL}
+      - OLLAMA_MODEL=${OLLAMA_MODEL}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - RI_DEBUG_ECHO=0
+      - RI_DISABLE_RETRIEVAL=0
+      - RI_DISABLE_OLLAMA=0
+      - RI_DISABLE_MEMBER_RECOS=0
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    container_name: renewal-ui
+    environment:
+      - RENEWAL_API_URL=http://backend:8000/api/chat
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8501:8501"
+    restart: unless-stopped

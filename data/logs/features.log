@@ -1,0 +1,5 @@
+2026-01-24 18:19:40 | features | INFO | Loading members from /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/raw/members.parquet
+2026-01-24 18:19:46 | features | INFO | Building member_features table...
+2026-01-24 18:19:46 | features | INFO | member_features rows: 500000
+2026-01-24 18:19:46 | features | INFO | Writing member_features to /Users/s0k092p/Documents/MTech/Project/renewal-intelligence-nba/data/processed/member_features.parquet
+2026-01-24 18:19:46 | features | INFO | Feature build complete.

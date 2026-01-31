@@ -1,0 +1,21 @@
+seed: 42
+
+n_members: 500000
+n_personas: 6
+
+entity_specs:
+  service: 8
+  category: 99
+  sub_category: 999
+  action: 9
+
+tenure_buckets:
+  - "0-3m"
+  - "3-12m"
+  - "1-3y"
+  - "3y+"
+
+files:
+  members_parquet: "data/raw/members.parquet"
+  nba_uplift_parquet: "data/raw/nba_uplift_summary.parquet"
+  transactions_parquet: "data/raw/transactions.parquet"
