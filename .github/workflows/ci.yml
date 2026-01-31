@@ -12,7 +12,7 @@ jobs:
 
     env:
       PYTHONUNBUFFERED: "1"
-      PYTHONPATH: .   # make `src` importable for pytest
+      PYTHONPATH: .
 
     steps:
       - name: Checkout
@@ -29,9 +29,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      # 🔹 NEW STEP: generate data so member_features.parquet exists
       - name: Generate sample data
         run: |
-          PYTHONPATH=. python src/data_gen/run_data_gen.py
+          PYTHONPATH=. python -m src.data_gen.run_data_gen
 
       - name: Run tests
         run: |

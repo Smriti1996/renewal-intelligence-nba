@@ -1,8 +1,5 @@
 from pathlib import Path
-
-import pytest  # you can keep this since other tests might use it
 from src.common.io import read_df
-
 
 def test_member_features_exist():
     project_root = Path(__file__).resolve().parents[1]
