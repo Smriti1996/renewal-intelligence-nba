@@ -211,3 +211,21 @@
 2026-01-31 16:29:27 | llm_router | INFO | Calling Ollama client.chat()
 2026-01-31 16:29:27 | llm_router | INFO | answer_query finished normally
 2026-01-31 16:29:32 | llm_router | INFO | answer_query finished normally
+2026-01-31 22:52:27 | llm_router | INFO | answer_query start, member=123456
+2026-01-31 22:52:27 | llm_router | INFO | Flags: debug_echo=False, disable_retrieval=False, disable_ollama=False, disable_member_recos=False
+2026-01-31 22:52:27 | llm_router | INFO | Detected intent: segment_analysis
+2026-01-31 22:52:27 | llm_router | INFO | Loading vector store and searching facts
+2026-01-31 22:52:31 | llm_router | INFO | Retrieved 10 facts
+2026-01-31 22:52:31 | llm_router | INFO | Building messages for intent=segment_analysis
+2026-01-31 22:52:31 | llm_router | INFO | Messages built; count=2
+2026-01-31 22:52:31 | llm_router | INFO | Calling Ollama client.chat()
+2026-01-31 22:52:31 | llm_router | INFO | answer_query finished normally
+2026-01-31 23:21:01 | llm_router | INFO | answer_query start, member=123456
+2026-01-31 23:21:01 | llm_router | INFO | Flags: debug_echo=False, disable_retrieval=False, disable_ollama=False, disable_member_recos=False
+2026-01-31 23:21:01 | llm_router | INFO | Detected intent: segment_analysis
+2026-01-31 23:21:01 | llm_router | INFO | Loading vector store and searching facts
+2026-01-31 23:21:05 | llm_router | INFO | Retrieved 10 facts
+2026-01-31 23:21:05 | llm_router | INFO | Building messages for intent=segment_analysis
+2026-01-31 23:21:05 | llm_router | INFO | Messages built; count=2
+2026-01-31 23:21:05 | llm_router | INFO | Calling Ollama client.chat()
+2026-01-31 23:21:05 | llm_router | INFO | answer_query finished normally

@@ -1,17 +1,9 @@
-# tests/test_data_gen.py
-
 from pathlib import Path
-import os
 
-import pytest
-
+import pytest  # you can keep this since other tests might use it
 from src.common.io import read_df
 
 
-@pytest.mark.skipif(
-    os.getenv("CI"),
-    reason="members.parquet not available in CI; run data_gen locally instead",
-)
 def test_member_features_exist():
     project_root = Path(__file__).resolve().parents[1]
     processed_dir = project_root / "data" / "processed"
