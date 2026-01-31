@@ -12,6 +12,7 @@ jobs:
 
     env:
       PYTHONUNBUFFERED: "1"
+      PYTHONPATH: .   # make `src` importable for pytest
 
     steps:
       - name: Checkout

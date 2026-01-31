@@ -6,6 +6,9 @@ on:
 
 jobs:
   deploy-to-vm:
+    # Skip the job if deploy secrets are not configured, instead of failing
+    if: ${{ secrets.DEPLOY_HOST != '' && secrets.DEPLOY_USER != '' && secrets.DEPLOY_SSH_KEY != '' }}
+
     runs-on: ubuntu-latest
 
     steps:
