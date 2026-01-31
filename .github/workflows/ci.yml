@@ -29,6 +29,10 @@ jobs:
           pip install -r requirements.txt
           pip install pytest
 
+      - name: Generate sample data
+        run: |
+          PYTHONPATH=. python src/data_gen/run_data_gen.py
+
       - name: Run tests
         run: |
           pytest -q
