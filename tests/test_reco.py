@@ -33,11 +33,13 @@ def test_member_nba_recos_schema():
 
     # Adjust to match your actual reco schema
     required_cols = [
-        "membership_nbr",
-        "entity_type",   # e.g. 'service', 'category', 'sub_category', 'action'
-        "entity_id",
-        "uplift_score",
-    ]
+    "membership_nbr",
+    "entity_type",
+    "entity_id",
+    "incremental_renewal_rate",
+    "score",
+        ]
+
 
     missing = [c for c in required_cols if c not in df.columns]
     assert not missing, f"Reco output missing required columns: {missing}"
